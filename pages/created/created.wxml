@@ -1,0 +1,28 @@
+<!--pages/created/created.wxml-->
+<view class="page-created-container">
+  <view class="page-created-main">
+    <view class="page-created-title">创建项目</view>
+    <form class="page-created-form">
+      <text>项目名称</text>
+      <input class="pj-name" value="{{createData.name}}" placeholder="例如：我要约多少个妹子" bindinput="changeName"></input>
+      <text>我的目标</text>
+      <input class="pj-target" value="{{createData.target}}"  placeholder="例如：先赚一个亿怎么样" bindinput="changeTarget"></input>
+      <text>完成时间</text>
+      <view class="page-created-time">
+        <picker class="page-created-startTime" mode="date" value="{{createData.startTime}}"  bindchange="startDateChange">
+          <view class="picker">
+            开始时间: {{createData.startTime}}
+          </view>
+        </picker>
+        <picker class="page-created-endTime" mode="date" value="{{createData.endTime}}"  bindchange="endDateChange">
+          <view class="picker">
+            结束时间: {{createData.endTime}}
+          </view>
+        </picker>
+      </view>
+      <text>备注</text>
+      <textarea class="pj-remark" value="{{createData.remark}}" bindinput="changeRemark" placeholder="例如：我要先把这个okr写完怎么样"></textarea>
+      <button class="pj-created" catchtap="createProject" hover-class="pj-created_hover">创建项目</button>
+    </form>
+  </view>
+</view>

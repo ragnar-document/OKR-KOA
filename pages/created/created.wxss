@@ -1,0 +1,68 @@
+/* pages/created/created.wxss */
+.page-created-container{
+    padding: 40rpx;
+}
+.page-created-title{
+    font-size: 36px;
+    color: #2dbcff;
+    margin-bottom:40rpx; 
+    border-bottom:1px solid #eee; 
+}
+.page-created-title::after{
+    position: absolutea;
+    content:'create';
+    font-size: 20px;
+    color: #eee;
+}
+.page-created-form text{
+    border-left: 4px solid #2dbcff;
+    padding-left: 4px;
+}
+.page-created-form text::after{
+  content: '*';
+  color: #f47983;
+}
+
+.page-created-form .pj-target,.pj-name{
+    height: 60rpx;
+    background-color: #eee;
+    border-radius: 10rpx;
+    margin: 20rpx 0;
+    padding: 0 20rpx;
+}
+.page-created-form .pj-remark{
+    padding: 20rpx 20rpx;
+    background-color: #eee;
+    height: 200rpx;
+    width: 94%;
+    margin-top: 20rpx;
+    margin-bottom: 40rpx;
+}
+.page-created-form .pj-created{
+    background: #2dbcff;
+    color: #fff;
+}
+.pj-created_hover{
+   background: #2dbcff8a;
+}
+.page-created-time{
+    display: flex;
+    justify-content: space-between;
+    padding: 40rpx 0;
+    font-size: small;
+}
+.page-created-time .page-created-startTime{
+    background-color: #3de1ad;
+    border-radius: 20rpx;
+    padding: 10rpx;
+    color: #fff;
+    width: 45%;
+}
+.page-created-time .page-created-endTime{
+    background-color: #f47983;
+    border-radius: 20rpx;
+    padding: 10rpx;
+    color: #fff;
+    width: 45%;
+}
+

@@ -1,0 +1,16 @@
+<!--pages/addokr/addokr.wxml-->
+<view class="page-addokr-container">
+  <view class="page-addokr-header">关联目标</view>
+  <view class="page-addokr-main">
+    <view class="page-addokr-add">
+      <input value="{{value}}" bindinput="inputChangeHandle"  auto-focus></input>
+      <button catchtap="addOkr">添加</button>
+    </view>
+    <view class="page-addokr-list">
+      <view class="pape-addokr-item" wx:for="{{todolist}}" catchtap="todoDel" data-index="{{index}}">
+        <view class="page-addokr-item-content">{{item.value}}</view>
+        <view class="page-addokr-item-createTime">{{item.createTime}}</view>
+      </view>
+    </view>
+  </view>
+</view>

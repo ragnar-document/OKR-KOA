@@ -1,0 +1,115 @@
+/* pages/details/details.wxss */
+.page-details-container{
+    padding: 40rpx;
+}
+.page-details-title{
+    font-size: 36px;
+    color: #2dbcff;
+    margin-bottom:40rpx; 
+    border-bottom:1px solid #eee; 
+}
+.page-details-title::after{
+    position: absolutea;
+    content:'details';
+    font-size: 20px;
+    color: #eee;
+}
+.page-details-main text{
+    border-left: 4px solid #2dbcff;
+    padding-left: 4px;
+}
+.page-details-main view{
+    margin: 30rpx 0;
+}
+.detailsItem{
+  background-color: #89ebc779;
+  color: #fff;
+  font-size: small;
+  padding: 10rpx;
+  border-radius: 8rpx;
+  border: 1px solid #1ac485;
+}
+.undetailsItem{
+  background-color: #eb737196;
+  color: #fff;
+  font-size: small;
+  padding: 10rpx;
+  border-radius: 8rpx;
+  border: 1px solid #f05654;
+}
+/* .details-list{
+  position: relative;
+  padding: 40rpx 0;
+  padding-left: 100rpx;
+  background-color: #fff;
+}
+
+.details-list:before{
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 0;
+  left: 60rpx;
+}
+
+.details-item{
+  position: relative;
+  padding-bottom: 30rpx;
+  padding-right: 30rpx;
+  border-bottom: 1px solid #f5f5f5;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  line-height: 1.5;
+  color: #999;
+}
+
+.details-item .details-item-context{
+  margin-bottom: 20rpx;
+}
+.details-item .details-item-date{
+  font-size: 28rpx;
+}
+
+.details-item:after{
+  content: '';
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 10rpx;
+  left: -50rpx;
+}
+
+.details-item:last-child{
+  border-bottom: none;
+}
+
+.details-item:first-child{
+  color: #22d7bb;
+}
+
+.details-item:first-child:after{
+  background-color: #22d7bb;
+}
+
+.details-item:first-child:before{
+  content: '';
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: #afe7df;
+  position: absolute;
+  top: 0rpx;
+  left: -60rpx;
+} */
+.pape-details-item{
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx;
+    border-bottom: 1px solid #eee;
+}

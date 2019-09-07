@@ -1,0 +1,42 @@
+/* pages/addokr/addokr.wxss */
+.page-addokr-container{
+    padding: 40rpx;
+}
+.page-addokr-header{
+    font-size: 36px;
+    color: #2dbcff;
+    margin-bottom:40rpx; 
+    border-bottom:1px solid #eee; 
+}
+.page-addokr-header::after{
+    position: absolutea;
+    content:'relevance';
+    font-size: 20px;
+    color: #eee;
+}
+.page-addokr-add{
+    display: flex;
+    justify-content: space-between;
+}
+.page-addokr-add input{
+    border: 1px solid #2dbcff;
+    border-radius: 8rpx;
+    line-height: 76rpx;
+    width: 80%;
+    height: 76rpx;
+    padding: 0 20rpx;
+}
+.page-addokr-add button{
+    line-height: 80rpx;
+    height: 80rpx;
+    width: 20%;
+    background-color: #2dbcff;
+    color: #fff;
+}
+.pape-addokr-item{
+    display: flex;
+    justify-content: space-between;
+    margin: 20rpx;
+    padding: 20rpx 10rpx;
+    border-bottom: 1px solid #eee;
+}

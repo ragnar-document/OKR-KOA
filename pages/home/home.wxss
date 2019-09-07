@@ -1,0 +1,85 @@
+/* pages/home/home.wxss */
+.page-home-container{
+    width: 100%;
+    height: 100%;
+}
+.page-home-header{
+    display: flex;
+    align-items: center;
+    padding: 40rpx;
+}
+.header-loginbtn{
+  color: #fff;
+  background: #2dbcff;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 180rpx;
+  font-size: small;
+  margin: 0;
+}
+.header-loginbtn_hover{
+  background: #2dbcffc2;
+}
+.page-bg{
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    left: 10%;
+}
+.page-home-header .home-header-logo image{
+    height: 160rpx;
+    width: 160rpx;
+    background: #999;
+    border: 10rpx solid #fff;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px -10px rgba(0,0,0,.3);
+    margin-right:40rpx; 
+
+}
+.page-home-header .header-name{
+    font-size: 18px;
+    font-weight: 600;
+    color:#2dbcff;
+}
+.page-home-todo-list{
+    padding: 0 40rpx;
+}
+.todo-list-item{
+    position: relative;
+    z-index: 10;
+    background-color: hsla(0,0%,100%,.8);
+    border-radius: 10rpx;
+    box-shadow: 0px 10px 30px -10px rgba(0,0,0,.3);
+    height: 140rpx;
+    padding: 20rpx;
+    margin: 20rpx 0;
+    overflow: hidden;
+}
+.todo-list-item .item-name{
+    font: 20px;
+}
+.page-home-todo-button{
+    position: fixed;
+    z-index: 999;
+    bottom: 100rpx;
+    right: 40rpx;
+}
+.page-home-todo-button .todo-button-history,.todo-button-created{
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 50%;
+    margin:20rpx 0;
+}
+.todo-button-created{
+    background-color: deepskyblue;
+    color: #fff;
+    text-align: center;
+}
+.todo-button-created image{
+    height: 80rpx;
+    width: 80rpx;
+}
+.todo-button-history image{
+     height: 90rpx;
+    width: 90rpx;
+}

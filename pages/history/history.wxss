@@ -1,0 +1,46 @@
+/* pages/history/history.wxss */
+.page-history-container{
+    padding: 40rpx;
+}
+.page-history-title{
+    position: relative;
+    font-size: 36px;
+    color: #2dbcff;
+    margin-bottom:40rpx; 
+    border-bottom:1px solid #eee; 
+}
+.page-history-title::after{
+    position: absolutea;
+    content:'history';
+    font-size: 20px;
+    color: #eee;
+}
+.page-history-item{
+    position: relative;
+    background: #2dbcff;
+    border-radius: 10rpx;
+    color: #fff;
+    padding: 10rpx;
+}
+.page-history-item::after{
+    content: '已完成';
+    position: absolute;
+    right: -8px;
+    top: -13px;
+    height: 60px;
+    width: 60px;
+    transform: rotate(-30deg);
+    text-align: center;
+    border-radius: 50%;
+    line-height: 60px;
+    color: #fff;
+    border:2px solid #fff;
+}
+.page-history-item .item-name{
+    font-size: 18px;
+}
+
+.page-history-item .item-create,.item-endTime{
+    font-size: 12px;
+}
+
