@@ -10,10 +10,10 @@
     <view class="header-name" wx:else>欢迎回来～{{userInfo.nickName}}</view>
   </view>
   <view class="page-home-todo-list">
-    <view class="todo-list-item" catchtap="actionSheet" wx:for="{{todoslist}}">
+    <view class="todo-list-item" bindtap="actionSheet" wx:for="{{todoslist}}" data-id="{{item.id}}">
         <view class="item-name">项目：{{item.title}}</view>
         <view class="item-object">我的目标：{{item.target}}</view>
-        <view class="item-created-time">开始时间：{{item.end_time}}</view>
+        <view class="item-created-time">开始时间：{{item.start_time}}</view>
     </view>
   </view>
   <view class="page-home-todo-button">

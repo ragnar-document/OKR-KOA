@@ -19,7 +19,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.loginbtn()
   },
 
   /**
@@ -31,7 +31,6 @@ Page({
   render:function(){
     app.login()
   },
-
   loginbtn:function(){
     app.login().then(res=>{
       console.log(res)
@@ -42,7 +41,6 @@ Page({
       }
       Project.todosList(user_id).then(todosListRes => {
         let todoslist = todosListRes.todolist.todolist
-        console.log(todoslist)
         this.setData({
           todoslist: todoslist,
           userInfo: userInfo,
@@ -50,27 +48,33 @@ Page({
           user_id: user_id,
         })
       })
-      // this.setData({
-      //   userInfo: userInfo,
-      //   logoShowbtn: false,
-      //   user_id: user_id,
-      // })
     this.render();
     })
   },
 
-  actionSheet:function(event){
+  actionSheet:function(e){
+    let id = e.currentTarget.dataset.id
+    console.log(id)
     wx.showActionSheet({
-      itemList: ['查看详情', '关联内容'],
+      itemList: ['查看详情', '关联内容','编辑内容','删除'],
       success(res) {
         if (res.tapIndex == 0){
           wx.navigateTo({
-            url: '/pages/details/details',
+            url: '/pages/details/details?id=' +id,
           })
         }else if(res.tapIndex == 1){
           wx.navigateTo({
-            url: '/pages/addokr/addokr',
+            url: '/pages/addokr/addokr?id=' + id,
           })
+        }else if(res.tapIndex == 2){
+          wx.navigateTo({
+            url: '/pages/editpage/editpage?id=' + id,
+          })
+        }else if(res.tapIndex == 3){
+          Project.todosDel(id).then(()=>{
+
+          })
+
         }
       },
       fail(res) {

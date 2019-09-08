@@ -92,10 +92,10 @@ Page({
         duration: 1000
       })
       setTimeout(()=>{
-        wx.navigateTo({
+        wx.navigateBack({
           url: '/pages/home/home',
         })
-      },1000)
+      },500)
     })
 
   },

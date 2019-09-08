@@ -71,7 +71,7 @@
     margin:20rpx 0;
 }
 .todo-button-created{
-    background-color: deepskyblue;
+    background: linear-gradient(to right, rgb(41, 128, 185), rgb(109, 213, 250), rgb(255, 255, 255));
     color: #fff;
     text-align: center;
 }

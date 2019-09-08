@@ -6,15 +6,18 @@
     <view class="details-name">{{todolist.title}}</view>
     <text>我的目标</text>
     <view class="details-object">{{todolist.target}}</view>
-    <text>项目备注</text>
-    <view class="details-remark">{{todolist.remark}}</view>
+    <text wx:if="{{todolist.remark}}">项目备注</text>
+    <view class="details-remark"  wx:if="{{todolist.remark}}">{{todolist.remark}}</view>
     <text>项目时间</text>
     <view class="details-time">开始时间:{{todolist.start_time}} ~ 结束时间:{{todolist.end_time}}</view>
-    <text>关联列表</text>
+    <text wx:if="{{details.length}}" >关联列表</text>
     <view class="details-list">
-       <view class="pape-details-item" wx:for="{{todolist}}" catchtap="todoComplete" data-index="{{index}}">
-        <view class="page-details-item-content">{{item.value}}</view>
-        <view class="page-details-item-createTime">{{item.createTime}}</view>
+       <view class="pape-details-item" wx:for="{{details}}" catchtap="todoComplete" data-status="{{item.status}}" data-index="{{item.id}}">
+       <view>
+
+        <view class="page-details-item-content">{{item.content}}</view>
+        <view class="page-details-item-createTime">{{item.create_time}}</view>
+       </view>
         <view class="{{item.status == 1 ? 'undetailsItem' : 'detailsItem'}}">{{item.status == 1 ? '未完成':'已完成'}}</view>
       </view>
       <!-- <view class="details-item">

@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/addokr/addokr",
+    "pages/editpage/editpage",
     "pages/details/details",
+    "pages/addokr/addokr",
     "pages/created/created",
     "pages/history/history",
     "pages/index/index",

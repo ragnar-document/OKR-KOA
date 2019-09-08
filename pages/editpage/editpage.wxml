@@ -1,0 +1,28 @@
+<!--pages/editpage/editpage.wxml-->
+<view class="page-editpage-container">
+  <view class="page-editpage-main">
+    <view class="page-editpage-title">编辑项目</view>
+    <form class="page-editpage-form">
+      <text>项目名称</text>
+      <input class="pj-name" value="{{todolist.title}}" placeholder="例如：我要约多少个妹子" bindinput="changeName"></input>
+      <text>我的目标</text>
+      <input class="pj-target" value="{{todolist.target}}"  placeholder="例如：先赚一个亿怎么样" bindinput="changeTarget"></input>
+      <text>完成时间</text>
+      <view class="page-editpage-time">
+        <picker class="page-editpage-startTime" mode="date" value="{{todolist.start_time}}"  bindchange="startDateChange">
+          <view class="picker">
+            开始时间: {{todolist.start_time}}
+          </view>
+        </picker>
+        <picker class="page-editpage-endTime" mode="date" value="{{todolist.end_time}}"  bindchange="endDateChange">
+          <view class="picker">
+            结束时间: {{todolist.end_time}}
+          </view>
+        </picker>
+      </view>
+      <text>备注</text>
+      <textarea class="pj-remark" value="{{editpageata.remark}}" bindinput="changeRemark" placeholder="例如：我要先把这个okr写完怎么样"></textarea>
+      <button class="pj-editpage" catchtap="editProject" hover-class="pj-editpage_hover">保存编辑</button>
+    </form>
+  </view>
+</view>

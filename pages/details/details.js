@@ -1,5 +1,6 @@
 // pages/details/details.js
-import Project from '../../models/project.js'
+import Project from '../../models/project.js';
+import Relevance from '../../models/relevance.js'
 //获取应用实例
 const app = getApp()
 
@@ -9,7 +10,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    todolist:[]
+    todolist:[],
+    details:[],
+    options_id:null
   },
 
   /**
@@ -18,42 +21,33 @@ Page({
   onLoad: function (options) {
     this.render(options.id)
   },
-  render:function(){
-    let id = 2;
-    Project.todosItem(id).then(res=>{
+  render:function(id){
+    let user_id = app.globalData.user_id;
+    Project.todosItem(id, user_id).then(res=>{
+
+      console.log(res)
       this.setData({
-        todolist: res.todolistItem.todolistItem[0]
+        todolist: res.projectDetails[0],
+        details: res.projectTaget,
+        options_id: id
       })
-    })
-    let todolist = [
-      {
-        value: '很好',
-        createTime: '2019-09-01',
-        status: 1
-      }
-    ]
-    this.setData({
-      todolist: todolist
     })
   },
   todoComplete:function(e){
-    let index = e.target.dataset.index;
-    if(index == ''){
-      return
-    }
+    let index = e.currentTarget.dataset.index;
+    let status = e.currentTarget.dataset.status;
+    console.log(e.currentTarget.dataset)
     let todos = this.data.todolist;
     let _this = this
-    if (todos[0].status == 1){
+    if (status == 1){
      wx.showModal({
        title: '提示',
        content: '是否确认已完成',
        success(res) {
          if (res.confirm) {
-           console.log(todos[0].status)
-           todos[0].status = 2;
-           _this.setData({
-             todos: todos
-           })
+           let id = _this.data.options_id;
+           Relevance.detailsUpdate(index,status)
+           _this.render(id)
          } else if (res.cancel) {
            console.log('用户点击取消')
          }
