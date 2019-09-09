@@ -23,11 +23,15 @@
 
 ✏️手绘一下想要的界面
 
-![]()
+![](https://github.com/ragnar-document/OKR-KOA/blob/master/pageImg/shougao.jpeg?raw=true)
 
 ✅实际产出的页面
 
-![]()
+![](https://github.com/ragnar-document/OKR-KOA/blob/master/pageImg/home.png?raw=true)
+![](https://github.com/ragnar-document/OKR-KOA/blob/master/pageImg/created.png?raw=true)
+![](https://github.com/ragnar-document/OKR-KOA/blob/master/pageImg/history.png?raw=true)
+![](https://github.com/ragnar-document/OKR-KOA/blob/master/pageImg/jiaohu.png?raw=true)
+![](https://github.com/ragnar-document/OKR-KOA/blob/master/pageImg/details.png?raw=true)
 
 📦封装请求api (部分例子)
 
