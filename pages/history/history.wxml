@@ -2,10 +2,10 @@
 <view class="page-history-container" >
     <view class="page-history-title">历史记录</view>
     <view class="page-history-list">
-       <view class="page-history-item">
-          <view class="item-name">任务名称:随便谢谢</view>
-          <view class="item-create">创建时间：2019-09-01</view>
-          <view class="item-endTime">完成时间：2019-09-01</view>
+       <view class="page-history-item" wx:for="{{todolist}}">
+          <view class="item-name">任务: {{item.title}}</view>
+          <view class="item-create">开始时间：{{item.start_time}}</view>
+          <view class="item-endTime">完成时间：{{item.over_time}}</view>
        </view>
     </view>
 </view>

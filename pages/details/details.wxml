@@ -3,27 +3,22 @@
   <view class="page-details-title">项目详情</view>
   <view class="page-details-main">
     <text>项目名称</text>
-    <view class="details-name">{{todolist.title}}</view>
+    <view class="details-name detailsView">{{todolist.title}}</view>
     <text>我的目标</text>
-    <view class="details-object">{{todolist.target}}</view>
+    <view class="details-object detailsView">{{todolist.target}}</view>
     <text wx:if="{{todolist.remark}}">项目备注</text>
-    <view class="details-remark"  wx:if="{{todolist.remark}}">{{todolist.remark}}</view>
+    <view class="details-remark detailsView"  wx:if="{{todolist.remark}}">{{todolist.remark}}</view>
     <text>项目时间</text>
-    <view class="details-time">开始时间:{{todolist.start_time}} ~ 结束时间:{{todolist.end_time}}</view>
+    <view class="details-time detailsView">开始时间:{{todolist.start_time}} ~ 结束时间:{{todolist.end_time}}</view>
     <text wx:if="{{details.length}}" >关联列表</text>
     <view class="details-list">
        <view class="pape-details-item" wx:for="{{details}}" catchtap="todoComplete" data-status="{{item.status}}" data-index="{{item.id}}">
-       <view>
-
+       <view class="pape-details-item-content">
         <view class="page-details-item-content">{{item.content}}</view>
         <view class="page-details-item-createTime">{{item.create_time}}</view>
        </view>
         <view class="{{item.status == 1 ? 'undetailsItem' : 'detailsItem'}}">{{item.status == 1 ? '未完成':'已完成'}}</view>
       </view>
-      <!-- <view class="details-item">
-        <view class="details-item-context">我要赚一个亿</view>
-        <view class="details-item-date">2019-09-01</view>
-      </view> -->
     </view>
   </view>
   <view class="page-footer-button"></view>

@@ -1,5 +1,5 @@
 //app.js
-import User from './models/user.js'
+import authServe from './models/authServe.js'
 App({
   onLaunch: function() {
     // 展示本地存储能力
@@ -8,36 +8,9 @@ App({
     wx.setStorageSync('logs', logs)
 
   },
-  login: function() {
-    let _this = this;
-    return new Promise((resolve,reject)=>{
-      wx.getUserInfo({
-        success: function(wxUserInfores) {
-          _this.globalData.userInfo = wxUserInfores.userInfo
-          wx.login({
-            success: (res) => {
-              if (res.code) {
-                User.login(res.code).then(res => {
-                  let token = res.token;
-                  _this.globalData.user_id = res.user_id;
-                  wx.setStorage({
-                    key: 'token',
-                    data: token
-                  })
-                })
-                resolve()
-              } else {
-                console.log('登录失败！' + res.errMsg)
-                reject()
-              }
-            }
-          })
-        }
-      })
-    })
-  },
   globalData: {
-    userInfo: null,
+    userInfo: {},
     user_id: null,
-  }
+  },
+  getUserInfo: authServe.getUserInfo
 })

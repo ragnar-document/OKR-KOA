@@ -21,6 +21,7 @@
     border-radius: 10rpx;
     color: #fff;
     padding: 10rpx;
+    margin: 40rpx 0;
 }
 .page-history-item::after{
     content: '已完成';

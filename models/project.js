@@ -34,12 +34,18 @@ export default {
     })
   },
   todosUpdate(id, params) {
+    console.log(params)
     return request({
       url: API.editProject(id),
       method: 'PUT',
       data: {
         params
       }
+    })
+  },
+  todosHistory(id) {
+    return request({
+      url: API.projectHistory(id)
     })
   }
 }

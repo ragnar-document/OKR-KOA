@@ -78,12 +78,14 @@ Page({
         duration: 1000
       })
     }
+    let status = 1;
     Project.insert({
       user_id,
       title,
       target,
       start_time,
       end_time,
+      status,
       remark
     }).then(()=>{
       wx.showToast({

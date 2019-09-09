@@ -1,4 +1,5 @@
 <!--pages/home/home.wxml-->
+<pd-loading is-show="{{!pageShow}}" class="pdloading"></pd-loading>
 <view class="page-home-container">
   <image class="page-bg" src="/images/home/empty.png">
   </image>
@@ -6,18 +7,18 @@
     <view class="home-header-logo">
       <image class="header-logo" src="{{userInfo.avatarUrl}}"></image>
     </view>
-    <button class="header-loginbtn" hover-class="header-loginbtn_hover"  catchtap="loginbtn" wx:if="{{logoShowbtn}}" open-type="getUserInfo">登陆</button>
+    <button class="header-loginbtn" hover-class="header-loginbtn_hover"  wx:if="{{logoShowbtn}}" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">登陆</button>
     <view class="header-name" wx:else>欢迎回来～{{userInfo.nickName}}</view>
   </view>
   <view class="page-home-todo-list">
-    <view class="todo-list-item" bindtap="actionSheet" wx:for="{{todoslist}}" data-id="{{item.id}}">
+    <view class="todo-list-item" bindtap="actionSheet" wx:for="{{todoslist}}" data-id="{{item.id}}" hover-class="todo-list-item_hover">
         <view class="item-name">项目：{{item.title}}</view>
         <view class="item-object">我的目标：{{item.target}}</view>
         <view class="item-created-time">开始时间：{{item.start_time}}</view>
     </view>
   </view>
   <view class="page-home-todo-button">
-    <navigator class="todo-button-history" url="/pages/history/history" hover-class="navigator-hover">
+    <navigator class="todo-button-history" url="/pages/history/history?id={{user_id}}" hover-class="navigator-hover">
       <image src="/images/detail/time.png"></image>
     </navigator>
     <navigator class="todo-button-created" url="/pages/created/created" hover-class="navigator-hover" >

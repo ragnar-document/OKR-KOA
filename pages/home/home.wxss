@@ -1,14 +1,17 @@
 /* pages/home/home.wxss */
-.page-home-container{
-    width: 100%;
-    height: 100%;
+
+.page-home-container {
+  width: 100%;
+  height: 100%;
 }
-.page-home-header{
-    display: flex;
-    align-items: center;
-    padding: 40rpx;
+
+.page-home-header {
+  display: flex;
+  align-items: center;
+  padding: 40rpx;
 }
-.header-loginbtn{
+
+.header-loginbtn {
   color: #fff;
   background: #2dbcff;
   height: 60rpx;
@@ -17,69 +20,87 @@
   font-size: small;
   margin: 0;
 }
-.header-loginbtn_hover{
+
+.header-loginbtn_hover {
   background: #2dbcffc2;
 }
-.page-bg{
-    position: fixed;
-    z-index: -1;
-    bottom: 0;
-    left: 10%;
-}
-.page-home-header .home-header-logo image{
-    height: 160rpx;
-    width: 160rpx;
-    background: #999;
-    border: 10rpx solid #fff;
-    border-radius: 50%;
-    box-shadow: 0px 10px 30px -10px rgba(0,0,0,.3);
-    margin-right:40rpx; 
 
+.page-bg {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  left: 10%;
 }
-.page-home-header .header-name{
-    font-size: 18px;
-    font-weight: 600;
-    color:#2dbcff;
+
+.page-home-header .home-header-logo image {
+  height: 160rpx;
+  width: 160rpx;
+  background: #999;
+  border: 10rpx solid #fff;
+  border-radius: 50%;
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
+  margin-right: 40rpx;
 }
-.page-home-todo-list{
-    padding: 0 40rpx;
+
+.page-home-header .header-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2dbcff;
 }
-.todo-list-item{
-    position: relative;
-    z-index: 10;
-    background-color: hsla(0,0%,100%,.8);
-    border-radius: 10rpx;
-    box-shadow: 0px 10px 30px -10px rgba(0,0,0,.3);
-    height: 140rpx;
-    padding: 20rpx;
-    margin: 20rpx 0;
-    overflow: hidden;
+
+.page-home-todo-list {
+  padding: 0 40rpx;
 }
-.todo-list-item .item-name{
-    font: 20px;
+
+.todo-list-item {
+  position: relative;
+  z-index: 10;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-right: 2px solid #2dbcff;
+  border-left: 2px solid #2dbcff;
+  border-radius: 10rpx;
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.3);
+  height: 140rpx;
+  padding: 20rpx;
+  margin: 20rpx 0;
+  overflow: hidden;
 }
-.page-home-todo-button{
-    position: fixed;
-    z-index: 999;
-    bottom: 100rpx;
-    right: 40rpx;
+
+.todo-list-item_hover {
+  border-right: 2px solid #f75671a9;
+  border-left: 2px solid #f75671a9;
 }
-.page-home-todo-button .todo-button-history,.todo-button-created{
-    height: 80rpx;
-    width: 80rpx;
-    border-radius: 50%;
-    margin:20rpx 0;
+
+.todo-list-item .item-name {
+  font: 20px;
 }
-.todo-button-created{
-    background: linear-gradient(to right, rgb(41, 128, 185), rgb(109, 213, 250), rgb(255, 255, 255));
-    color: #fff;
-    text-align: center;
+
+.page-home-todo-button {
+  position: fixed;
+  z-index: 999;
+  bottom: 100rpx;
+  right: 40rpx;
 }
-.todo-button-created image{
-    height: 80rpx;
-    width: 80rpx;
+
+.page-home-todo-button .todo-button-history, .todo-button-created {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  margin: 20rpx 0;
 }
-.todo-button-history image{
-     height: 90rpx;
-    width: 90rpx;
+
+.todo-button-created {
+  background: #2dbcff;
+  color: #fff;
+  text-align: center;
+}
+
+.todo-button-created image {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.todo-button-history image {
+  height: 90rpx;
+  width: 90rpx;
 }
